@@ -1,5 +1,11 @@
 package entity.move;
 
-public class SpecialMove {
+import entity.pieces.Piece;
+
+public class SpecialMove extends Move {
+    // constructor
+    public SpecialMove(int startXPos, int startYPos, int endXPos, int endYPos, Piece piece) {
+        super(startXPos, startYPos, endXPos, endYPos, piece);
+    }
 
 }

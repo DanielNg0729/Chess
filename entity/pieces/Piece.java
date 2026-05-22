@@ -1,5 +1,8 @@
 package entity.pieces;
 
+import java.util.List;
+
+import entity.board.Cell;
 import entity.enums.Faction;
 import entity.move.Move;
 
@@ -8,6 +11,20 @@ public abstract class Piece {
     private int value;
     private Faction side;
 
+    // constructor
+    public Piece(int value, Faction side) {
+        this.value = value;
+        this.side = side;
+    }
+
     // methods
-    abstract Move[] move();
+    abstract List<Move> move(Cell[][] board, int curX, int curY);
+
+    public Faction getSide() {
+        return side;
+    }
+
+    public int getValue() {
+        return value;
+    }
 }
