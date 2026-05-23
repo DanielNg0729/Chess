@@ -1,13 +1,23 @@
-//UNFINISHED  
 package entity.move;
 
 import entity.pieces.Piece;
 
-public class Castling /* extends SpecialMove */ {
+public class Castling extends SpecialMove {
+    // attributes
     private Piece secondPiece;
     private int secondPieceEndXPos;
     private int secondPieceEndyPos;
 
+    // constructor
+    public Castling(int startXPos, int startYPos, int endXPos, int endYPos, Piece piece, int secondXPos, int secondYPos,
+            Piece secondPiece) {
+        super(startXPos, startYPos, endXPos, endYPos, piece);
+        secondPieceEndXPos = secondXPos;
+        secondPieceEndyPos = secondYPos;
+        this.secondPiece = secondPiece;
+    }
+
+    // methods
     public Piece getSecondPiece() {
         return secondPiece;
     }
