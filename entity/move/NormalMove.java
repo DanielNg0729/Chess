@@ -8,8 +8,8 @@ public class NormalMove extends Move {
 
     // constructor
     public NormalMove(int startXPos, int startYPos, int endXPos, int endYPos, Piece piece, Piece capture) {
-        this.capture = capture;
         super(startXPos, startYPos, endXPos, endYPos, piece);
+        this.capture = capture;
     }
 
     // methods

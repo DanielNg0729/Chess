@@ -18,7 +18,7 @@ public abstract class Piece {
     }
 
     // methods
-    abstract List<Move> move(Cell[][] board, int curX, int curY);
+    public abstract List<Move> move(Cell[][] board, int curX, int curY);
 
     public Faction getSide() {
         return side;
