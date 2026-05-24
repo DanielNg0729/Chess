@@ -43,4 +43,8 @@ public class Cell {
         contain = piece;
     }
 
+    public void setColor(BoardColor c) {
+        color = c;
+    }
+
 }

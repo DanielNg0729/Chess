@@ -11,8 +11,16 @@ public class GameState {
     // attributes
     private Faction turn;
     private List<Move> moveHistory;
-    private Result gameState;
+    private Result gameStatus;
     private ChessBoard chessBoard;
+
+    // constructor
+    public GameState(Faction t, List<Move> m, Result g, ChessBoard c) {
+        turn = t;
+        moveHistory = m;
+        gameStatus = g;
+        chessBoard = c;
+    }
 
     // methods
     public Faction getTurn() {
@@ -23,11 +31,27 @@ public class GameState {
         return moveHistory;
     }
 
-    public Result getGameState() {
-        return gameState;
+    public Result getGameStatus() {
+        return gameStatus;
     }
 
     public ChessBoard getChessBoard() {
         return chessBoard;
+    }
+
+    public void setChessBoard(ChessBoard c) {
+        chessBoard = c;
+    }
+
+    public void setTurn(Faction t) {
+        turn = t;
+    }
+
+    public void setGameStatus(Result r) {
+        gameStatus = r;
+    }
+
+    public void addMoveHistory(Move m) {
+        moveHistory.add(m);
     }
 }

@@ -6,14 +6,14 @@ public class Castling extends SpecialMove {
     // attributes
     private Piece secondPiece;
     private int secondPieceEndXPos;
-    private int secondPieceEndyPos;
+    private int secondPieceEndYPos;
 
     // constructor
     public Castling(int startXPos, int startYPos, int endXPos, int endYPos, Piece piece, int secondXPos, int secondYPos,
             Piece secondPiece) {
         super(startXPos, startYPos, endXPos, endYPos, piece);
         secondPieceEndXPos = secondXPos;
-        secondPieceEndyPos = secondYPos;
+        secondPieceEndYPos = secondYPos;
         this.secondPiece = secondPiece;
     }
 
@@ -27,6 +27,6 @@ public class Castling extends SpecialMove {
     }
 
     public int getSecondPieceEndYPos() {
-        return secondPieceEndyPos;
+        return secondPieceEndYPos;
     }
 }
