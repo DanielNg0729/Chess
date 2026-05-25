@@ -20,6 +20,7 @@ import entity.pieces.Rook;
 public class UI {
     // attributes
     private GameController gameController;
+    private Scanner sc = new Scanner(System.in);
 
     // constructor
     public UI(GameController gc) {
@@ -102,12 +103,10 @@ public class UI {
     }
 
     public Move askMove() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the start position of the piece. Eg: Ra1");
+        System.out.println("Enter the start position of the piece (Eg: Ra1): ");
         String startPos = sc.next();
-        System.out.println("Enter the end position of the piece. Eg: a5 (Rook moves from a1 to a5)");
+        System.out.println("Enter the end position of the piece (Eg: a5 (Rook moves from a1 to a5)): ");
         String endPos = sc.next();
-        sc.close();
 
         Cell[][] board = gameController.getGameState().getChessBoard().getBoard();
 
@@ -171,7 +170,7 @@ public class UI {
     }
 
     private void invalidMessage() {
-        System.out.println("Your move is invalid");
+        System.out.println("Your move is invalid!");
 
     }
 
