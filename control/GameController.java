@@ -111,4 +111,12 @@ public class GameController {
         return Result.DRAW;
 
     }
+
+    public GameState getGameState() {
+        return gameState;
+    }
+
+    public LegalMove getLegalMove() {
+        return legalMove;
+    }
 }
