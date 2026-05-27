@@ -34,40 +34,46 @@ public class UI {
 
         if (piece instanceof King) {
             if (piece.getSide() == Faction.WHITE)
-                return "♔";
+                return "\u2654"; // White King
             else
-                return "♚";
+                return "\u265A"; // Black King
         }
+
         if (piece instanceof Queen) {
             if (piece.getSide() == Faction.WHITE)
-                return "♕";
+                return "\u2655"; // White Queen
             else
-                return "♛";
+                return "\u265B"; // Black Queen
         }
+
         if (piece instanceof Rook) {
             if (piece.getSide() == Faction.WHITE)
-                return "♖";
+                return "\u2656"; // White Rook
             else
-                return "♜";
+                return "\u265C"; // Black Rook
         }
+
         if (piece instanceof Bishop) {
             if (piece.getSide() == Faction.WHITE)
-                return "♗";
+                return "\u2657"; // White Bishop
             else
-                return "♝";
+                return "\u265D"; // Black Bishop
         }
+
         if (piece instanceof Knight) {
             if (piece.getSide() == Faction.WHITE)
-                return "♘";
+                return "\u2658"; // White Knight
             else
-                return "♞";
+                return "\u265E"; // Black Knight
         }
+
         if (piece instanceof Pawn) {
             if (piece.getSide() == Faction.WHITE)
-                return "♙";
+                return "\u2659"; // White Pawn
             else
-                return "♟";
+                return "\u265F"; // Black Pawn
         }
+
         return "?";
     }
 
