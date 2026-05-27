@@ -138,6 +138,7 @@ public class UI {
         Cell[][] board = gameController.getGameState().getChessBoard().getBoard();
 
         int startX, startY, endX, endY;
+        List<Move> moveHistory = gameController.getGameState().getMoveHistory();
         Character pieceLetter = null;
 
         if (startPos.length() == 2) {
@@ -175,7 +176,7 @@ public class UI {
             return null;
         }
 
-        List<Move> moves = piece.move(board, startX, startY);
+        List<Move> moves = piece.move(board, startX, startY, moveHistory);
         for (Move move : moves) {
             if (move.getEndXPos() == endX
                     && move.getEndYPos() == endY
