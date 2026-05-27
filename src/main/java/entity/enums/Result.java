@@ -1,4 +1,4 @@
-package entity.enums;
+package src.main.java.entity.enums;
 
 public enum Result {
     ONGOING,

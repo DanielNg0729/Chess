@@ -1,6 +1,6 @@
-package entity.move;
+package src.main.java.entity.move;
 
-import entity.pieces.Piece;
+import src.main.java.entity.pieces.Piece;
 
 public abstract class SpecialMove extends Move {
     // constructor

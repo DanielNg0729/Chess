@@ -1,4 +1,4 @@
-package entity.board;
+package src.main.java.entity.board;
 
 public class ChessBoard {
     // attributes

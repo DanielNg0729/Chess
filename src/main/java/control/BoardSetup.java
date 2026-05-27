@@ -1,15 +1,15 @@
-package control;
+package src.main.java.control;
 
-import entity.board.Cell;
-import entity.board.ChessBoard;
-import entity.enums.BoardColor;
-import entity.enums.Faction;
-import entity.pieces.Bishop;
-import entity.pieces.King;
-import entity.pieces.Knight;
-import entity.pieces.Pawn;
-import entity.pieces.Queen;
-import entity.pieces.Rook;
+import src.main.java.entity.board.Cell;
+import src.main.java.entity.board.ChessBoard;
+import src.main.java.entity.enums.BoardColor;
+import src.main.java.entity.enums.Faction;
+import src.main.java.entity.pieces.Bishop;
+import src.main.java.entity.pieces.King;
+import src.main.java.entity.pieces.Knight;
+import src.main.java.entity.pieces.Pawn;
+import src.main.java.entity.pieces.Queen;
+import src.main.java.entity.pieces.Rook;
 
 public class BoardSetup {
     // methods

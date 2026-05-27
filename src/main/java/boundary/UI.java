@@ -1,21 +1,21 @@
-package boundary;
+package src.main.java.boundary;
 
 import java.util.List;
 import java.util.Scanner;
 
-import control.GameController;
-import entity.board.Cell;
-import entity.board.ChessBoard;
-import entity.enums.Faction;
-import entity.enums.Result;
-import entity.move.Move;
-import entity.pieces.Bishop;
-import entity.pieces.King;
-import entity.pieces.Knight;
-import entity.pieces.Pawn;
-import entity.pieces.Piece;
-import entity.pieces.Queen;
-import entity.pieces.Rook;
+import src.main.java.control.GameController;
+import src.main.java.entity.board.Cell;
+import src.main.java.entity.board.ChessBoard;
+import src.main.java.entity.enums.Faction;
+import src.main.java.entity.enums.Result;
+import src.main.java.entity.move.Move;
+import src.main.java.entity.pieces.Bishop;
+import src.main.java.entity.pieces.King;
+import src.main.java.entity.pieces.Knight;
+import src.main.java.entity.pieces.Pawn;
+import src.main.java.entity.pieces.Piece;
+import src.main.java.entity.pieces.Queen;
+import src.main.java.entity.pieces.Rook;
 
 public class UI {
     // attributes

@@ -1,7 +1,7 @@
-package entity.board;
+package src.main.java.entity.board;
 
-import entity.enums.BoardColor;
-import entity.pieces.Piece;
+import src.main.java.entity.enums.BoardColor;
+import src.main.java.entity.pieces.Piece;
 
 public class Cell {
     // attributes
