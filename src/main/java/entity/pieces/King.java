@@ -5,6 +5,7 @@ import java.util.List;
 
 import src.main.java.entity.board.Cell;
 import src.main.java.entity.enums.Faction;
+import src.main.java.entity.move.Castling;
 import src.main.java.entity.move.Move;
 import src.main.java.entity.move.NormalMove;
 
@@ -39,6 +40,26 @@ public class King extends Piece {
                         new NormalMove(curX, curY, curX + dir[0], curY + dir[1], this,
                                 board[curX + dir[0]][curY + dir[1]].getContain()));
             }
+        }
+
+        // check Castling
+        // short castling
+        if (curX == 4 && this.getIsFirstMove() && board[curX + 1][curY].getContain() == null
+                && board[curX + 2][curY].getContain() == null
+                && board[curX + 3][curY].getContain() instanceof Rook
+                && board[curX + 3][curY].getContain().getIsFirstMove()) {
+            moves.add(
+                    new Castling(curX, curY, curX + 2, curY, this, curX + 1, curY, board[curX + 3][curY].getContain()));
+        }
+
+        // long castling
+        if (curX == 4 && this.getIsFirstMove() && board[curX - 1][curY].getContain() == null
+                && board[curX - 2][curY].getContain() == null
+                && board[curX - 3][curY].getContain() == null
+                && board[curX - 4][curY].getContain() instanceof Rook
+                && board[curX - 4][curY].getContain().getIsFirstMove()) {
+            moves.add(
+                    new Castling(curX, curY, curX - 2, curY, this, curX - 1, curY, board[curX - 4][curY].getContain()));
         }
         return moves;
     }

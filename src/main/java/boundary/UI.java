@@ -8,6 +8,7 @@ import src.main.java.entity.board.Cell;
 import src.main.java.entity.board.ChessBoard;
 import src.main.java.entity.enums.Faction;
 import src.main.java.entity.enums.Result;
+import src.main.java.entity.move.Castling;
 import src.main.java.entity.move.Move;
 import src.main.java.entity.pieces.Bishop;
 import src.main.java.entity.pieces.King;
@@ -111,6 +112,26 @@ public class UI {
     public Move askMove() {
         System.out.println("Enter the start position of the piece (Eg: Ra1): ");
         String startPos = sc.next();
+
+        // castling check
+        if (startPos.equals("O-O")) {
+            Cell[][] board = gameController.getGameState().getChessBoard().getBoard();
+            if (gameController.getGameState().getTurn() == Faction.WHITE) {
+                return new Castling(4, 0, 6, 0, board[4][0].getContain(), 5, 0, board[7][0].getContain());
+            } else {
+                return new Castling(4, 7, 6, 7, board[4][7].getContain(), 5, 7, board[7][7].getContain());
+            }
+        }
+
+        else if (startPos.equals("O-O-O")) {
+            Cell[][] board = gameController.getGameState().getChessBoard().getBoard();
+            if (gameController.getGameState().getTurn() == Faction.WHITE) {
+                return new Castling(4, 0, 2, 0, board[4][0].getContain(), 3, 0, board[0][0].getContain());
+            } else {
+                return new Castling(4, 7, 2, 7, board[4][7].getContain(), 3, 7, board[0][7].getContain());
+            }
+        }
+
         System.out.println("Enter the end position of the piece (Eg: a5 (Rook moves from a1 to a5)): ");
         String endPos = sc.next();
 

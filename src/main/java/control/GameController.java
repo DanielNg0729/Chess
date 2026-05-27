@@ -7,6 +7,8 @@ import src.main.java.entity.board.Cell;
 import src.main.java.entity.board.ChessBoard;
 import src.main.java.entity.enums.Faction;
 import src.main.java.entity.enums.Result;
+import src.main.java.entity.move.Castling;
+import src.main.java.entity.move.EnPassant;
 import src.main.java.entity.move.Move;
 import src.main.java.entity.pieces.King;
 import src.main.java.entity.pieces.Piece;
@@ -42,8 +44,41 @@ public class GameController {
         int endY = move.getEndYPos();
         Piece movingPiece = board[startX][startY].getContain();
 
-        board[startX][startY].setContain(null);
-        board[endX][endY].setContain(movingPiece);
+        // check Castling
+        if (move instanceof Castling) {
+            // short
+            if (((Castling) move).getSecondPieceEndXPos() == 5) {
+                Piece secondPiece = board[startX + 3][startY].getContain();
+                board[startX][startY].setContain(null);
+                board[startX + 3][startY].setContain(null);
+                board[endX][endY].setContain(movingPiece);
+                board[startX + 1][startY].setContain(secondPiece);
+            }
+
+            // long
+            if (((Castling) move).getSecondPieceEndXPos() == 3) {
+                Piece secondPiece = board[0][startY].getContain();
+                board[startX][startY].setContain(null);
+                board[0][startY].setContain(null);
+                board[endX][endY].setContain(movingPiece);
+                board[startX - 1][startY].setContain(secondPiece);
+            }
+
+        }
+
+        else if (move instanceof EnPassant) {
+            board[startX][startY].setContain(null);
+            board[endX][startY].setContain(null);
+            board[endX][endY].setContain(movingPiece);
+        }
+
+        else {
+            board[startX][startY].setContain(null);
+            board[endX][endY].setContain(movingPiece);
+        }
+
+        // change isFirstMove
+        movingPiece.changeIsFirstMove();
 
         // add to move History
         gameState.addMoveHistory(move);
