@@ -1,18 +1,18 @@
-package src.main.java.control;
+package control;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import src.main.java.entity.board.Cell;
-import src.main.java.entity.board.ChessBoard;
-import src.main.java.entity.enums.Faction;
-import src.main.java.entity.enums.Result;
-import src.main.java.entity.move.Castling;
-import src.main.java.entity.move.EnPassant;
-import src.main.java.entity.move.Move;
-import src.main.java.entity.pieces.King;
-import src.main.java.entity.pieces.Piece;
-import src.main.java.entity.state.GameState;
+import entity.board.Cell;
+import entity.board.ChessBoard;
+import entity.enums.Faction;
+import entity.enums.Result;
+import entity.move.Castling;
+import entity.move.EnPassant;
+import entity.move.Move;
+import entity.pieces.King;
+import entity.pieces.Piece;
+import entity.state.GameState;
 
 public class GameController {
     // attributes

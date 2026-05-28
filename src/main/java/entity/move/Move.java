@@ -1,6 +1,6 @@
-package src.main.java.entity.move;
+package entity.move;
 
-import src.main.java.entity.pieces.Piece;
+import entity.pieces.Piece;
 
 public abstract class Move {
     // attributes

@@ -1,11 +1,11 @@
-package src.main.java.control;
+package control;
 
-import src.main.java.entity.board.Cell;
-import src.main.java.entity.board.ChessBoard;
-import src.main.java.entity.move.Castling;
-import src.main.java.entity.move.Move;
-import src.main.java.entity.pieces.King;
-import src.main.java.entity.pieces.Piece;
+import entity.board.Cell;
+import entity.board.ChessBoard;
+import entity.move.Castling;
+import entity.move.Move;
+import entity.pieces.King;
+import entity.pieces.Piece;
 
 public class LegalMove {
     // attributes

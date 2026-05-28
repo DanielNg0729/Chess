@@ -1,14 +1,14 @@
-package src.main.java.entity.pieces;
+package entity.pieces;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import src.main.java.entity.board.Cell;
-import src.main.java.entity.enums.Faction;
-import src.main.java.entity.move.EnPassant;
-import src.main.java.entity.move.Move;
-import src.main.java.entity.move.NormalMove;
-import src.main.java.entity.move.Promotion;
+import entity.board.Cell;
+import entity.enums.Faction;
+import entity.move.EnPassant;
+import entity.move.Move;
+import entity.move.NormalMove;
+import entity.move.Promotion;
 
 public class Pawn extends Piece {
     // constructor

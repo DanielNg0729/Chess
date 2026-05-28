@@ -1,11 +1,11 @@
-package src.main.java.entity.state;
+package entity.state;
 
 import java.util.List;
 
-import src.main.java.entity.board.ChessBoard;
-import src.main.java.entity.enums.Faction;
-import src.main.java.entity.enums.Result;
-import src.main.java.entity.move.Move;
+import entity.board.ChessBoard;
+import entity.enums.Faction;
+import entity.enums.Result;
+import entity.move.Move;
 
 public class GameState {
     // attributes

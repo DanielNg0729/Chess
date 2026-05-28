@@ -1,10 +1,8 @@
-package src.main.java;
-
-import src.main.java.boundary.UI;
-import src.main.java.control.BoardSetup;
-import src.main.java.control.GameController;
-import src.main.java.entity.enums.Result;
-import src.main.java.entity.move.Move;
+import boundary.UI;
+import control.BoardSetup;
+import control.GameController;
+import entity.enums.Result;
+import entity.move.Move;
 
 public class App {
     public static void main(String[] args) {

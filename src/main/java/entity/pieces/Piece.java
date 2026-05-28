@@ -1,10 +1,10 @@
-package src.main.java.entity.pieces;
+package entity.pieces;
 
 import java.util.List;
 
-import src.main.java.entity.board.Cell;
-import src.main.java.entity.enums.Faction;
-import src.main.java.entity.move.Move;
+import entity.board.Cell;
+import entity.enums.Faction;
+import entity.move.Move;
 
 public abstract class Piece {
     // attributes
